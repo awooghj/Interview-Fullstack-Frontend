@@ -16,15 +16,6 @@ const state = reactive({
   isLoading: true,
 });
 
-// onMounted(async () => {
-//   try {
-//     const response = await fetch('http://localhost:8080/api/votes/items');
-//     const data = await response.json();
-//     votes.value = data.map((vote) => vote);
-//   } catch (error) {
-//     console.log('Error fetching tasks');
-//   }
-// });
 onMounted(async () => {
   try {
     const response = await axios.get('http://localhost:8080/api/votes/items');
